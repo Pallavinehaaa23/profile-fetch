@@ -1,0 +1,23 @@
+<% include('../layouts/headers.ejs') %>
+<h1>User profile</h1>
+<form action="/register" method="post">
+    <p>Name:</p>
+    <input type="text" name="name" required>
+    <p>Email:</p>
+    <input type="email" name="email" required>
+    <p>Mobileno:</p>
+    <input type="text" name="mobile" required>
+    <p>password:</p>
+    <input type="password" name="password" required>
+    <p>CV upload:</p>
+    <input type="file" name="resume" required>
+    <button type="submit">submit</button>
+</form>
+<% 
+if(typeof message!=='undefined'){
+    %>
+    <p style="color: green;"><%= message %></p>
+    <%
+}
+%>
+<% include('../layouts/footers.ejs') %>

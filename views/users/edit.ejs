@@ -1,0 +1,9 @@
+<% include('../layouts/headers.ejs') %>
+<form action="" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="user_id" value="<%= user._id %>">
+    <input type="text" name="name" value="<%= user.name%>" placeholder="Enter Name" required>
+    <input type="email" name="email" value="<%= user.email%>" placeholder="Enter email" required>
+    <input type="text" name="mobile" value="<%= user.mobile%>" placeholder="Enter mobile" required>
+    <button type="submit">Update Profile</button>
+</form>
+<% include('../layouts/footers.ejs') %>

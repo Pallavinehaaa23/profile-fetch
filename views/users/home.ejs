@@ -1,0 +1,21 @@
+<% include('../layouts/headers.ejs') %>
+<h1>Welcome,  <%= user.name %></h1>
+<table>
+    <tr>   
+         <td>Name</td>
+        <td><%= user.name %></td>
+    </tr>
+    <tr> 
+           <td>Email</td>
+        <td><%= user.email %></td>
+    </tr>
+    <tr> 
+        <td>Mobile No</td>
+     <td><%= user.mobile %></td>
+ </tr>
+
+
+</table>
+<a href="/edit?id=<%= user._id %>">Edit profile</a>
+<a href="/logout">Logout</a>
+<% include('../layouts/footers.ejs') %>
